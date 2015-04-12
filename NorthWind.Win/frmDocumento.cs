@@ -1,4 +1,5 @@
 ﻿using NorthWind.Entity;
+using NorthWind.Win.BL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,44 @@ namespace NorthWind.Win
             txtcliente.Text = e.Nombre;
             txtruc.Text = e.Ruc;
             otmpCliente = e;
+        }
+
+        TbProductoBE otmpProducto;
+        void oFrmProducto_OnProductoSeleccionado(object sender, TbProductoBE e)
+        {
+            txtproducto.Text=e.Descripcion;
+            txtprecio.Text=e.Precio;
+            otmpProducto = e;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Boton Seleccionar Producto
+            frmProducto oFrmProducto = new frmProducto();
+            oFrmProducto.onProductoSeleccionado += new EventHandler<TbProductoBE>(
+                oFrmProducto_OnProductoSeleccionado);
+            oFrmProducto.Show();
+        }
+
+        DocumentoBL oFacturaBL = new DocumentoBL();
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Boton Agregar a Factura
+            oFacturaBL.AgregarDetalle(new ItemBE()
+            {
+                Cantidad= Convert.ToInt32(txtcantidad.Text),
+                Precio=Convert.ToInt32(txtprecio.Text),
+                Producto = otmpProducto
+            });
+
+            //Actualizar DataGrid
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = oFacturaBL.GetDetalle();
+
+            txtsubtotal.Text = oFacturaBL.SubTotal.ToString();
+            txtigv.Text = oFacturaBL.IGV.ToString();
+            txttotal.Text = oFacturaBL.Total.ToString();
+
         }
     }
 }
