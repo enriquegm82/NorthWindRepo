@@ -15,8 +15,6 @@ C:\NET\Sesion2\NorthwindSolution\NorthWind.Win\obj\Debug\NorthWind.Win.frmClient
 C:\NET\Sesion2\NorthwindSolution\NorthWind.Win\obj\Debug\NorthWind.Win.frmProducto.resources
 C:\NET\Sesion2\NorthwindSolution\NorthWind.Win\obj\Debug\NorthWind.Win.frmDocumento.resources
 C:\northwind\NorthWind.Win\bin\Debug\NorthWind.Win.exe.config
-C:\northwind\NorthWind.Win\obj\Debug\NorthWind.Win.exe
-C:\northwind\NorthWind.Win\obj\Debug\NorthWind.Win.pdb
 C:\northwind\NorthWind.Win\bin\Debug\NorthWind.Win.exe
 C:\northwind\NorthWind.Win\bin\Debug\NorthWind.Win.pdb
 C:\northwind\NorthWind.Win\bin\Debug\NorthWind.Entity.dll
@@ -27,3 +25,7 @@ C:\northwind\NorthWind.Win\obj\Debug\NorthWind.Win.frmDocumento.resources
 C:\northwind\NorthWind.Win\obj\Debug\NorthWind.Win.frmProducto.resources
 C:\northwind\NorthWind.Win\obj\Debug\NorthWind.Win.Properties.Resources.resources
 C:\northwind\NorthWind.Win\obj\Debug\NorthWind.Win.csproj.GenerateResource.Cache
+C:\northwind\NorthWind.Win\obj\Debug\NorthWind.Win.exe
+C:\northwind\NorthWind.Win\obj\Debug\NorthWind.Win.pdb
+C:\northwind\NorthWind.Win\bin\Debug\NorthWind.DAO.dll
+C:\northwind\NorthWind.Win\bin\Debug\NorthWind.DAO.pdb

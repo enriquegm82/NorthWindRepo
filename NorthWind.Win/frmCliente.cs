@@ -1,4 +1,5 @@
-﻿using NorthWind.Entity;
+﻿using NorthWind.DAO;
+using NorthWind.Entity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +26,7 @@ namespace NorthWind.Win
 
         private void frmCliente_Load(object sender, EventArgs e)
         {
-            Lista = TbClienteBE.SelectAll();
+            Lista = TbClienteDAO.SelectAll();
             TbClientebindingSource.DataSource = Lista;
             this.dataGridView1.SelectionMode = 
                 DataGridViewSelectionMode.FullRowSelect;
