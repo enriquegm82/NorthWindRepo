@@ -1,4 +1,5 @@
-﻿using NorthWind.Entity;
+﻿using NorthWind.DAO;
+using NorthWind.Entity;
 using NorthWind.Win.BL;
 using System;
 using System.Collections.Generic;
@@ -60,7 +61,7 @@ namespace NorthWind.Win
             oFacturaBL.AgregarDetalle(new ItemBE()
             {
                 Cantidad= Convert.ToInt32(txtcantidad.Text),
-                Precio=Convert.ToInt32(txtprecio.Text),
+                Precio=Convert.ToDecimal(txtprecio.Text),
                 Producto = otmpProducto
             });
 
@@ -72,6 +73,12 @@ namespace NorthWind.Win
             txtigv.Text = oFacturaBL.IGV.ToString();
             txttotal.Text = oFacturaBL.Total.ToString();
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            
         }
     }
 }
