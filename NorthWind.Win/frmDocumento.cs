@@ -84,10 +84,37 @@ namespace NorthWind.Win
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
+            List<ItemBE> Lista = new List<ItemBE>();
+            Lista = oFacturaBL.GetDetalle();
+            try
+            {
+                int i = dataGridView1.CurrentRow.Index;
+                if (i < 0) {return;}
+                string Numitem = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                int iNumItem = Convert.ToInt32(Numitem);
+                ItemBE oItem = (from item in Lista.ToArray()
+                                where item.Item.Equals(iNumItem)
+                                select item).Single();
 
-            
+                //Boton Eliminar Detalle
+                oFacturaBL.EliminarDetalle(oItem);
+
+                //Actualizar DataGrid
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = oFacturaBL.GetDetalle();
+
+                txtsubtotal.Text = oFacturaBL.SubTotal.ToString();
+                txtigv.Text = oFacturaBL.IGV.ToString();
+                txttotal.Text = oFacturaBL.Total.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No existen items en el detalle");
+                return;
+            }
+
         }
     }
 }

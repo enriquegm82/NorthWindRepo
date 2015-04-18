@@ -29,6 +29,13 @@ namespace NorthWind.Win.BL
             oDetalle.Add(oItem);
         }
 
+        public void EliminarDetalle(ItemBE oItem)
+        {
+            SubTotal -= oItem.Total;
+            oItem.Item = oDetalle.Count - 1;
+            oDetalle.Remove(oItem);
+        }
+
         public List<ItemBE> GetDetalle()
         {
             return oDetalle;

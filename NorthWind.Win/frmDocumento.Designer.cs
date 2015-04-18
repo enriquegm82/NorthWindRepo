@@ -60,6 +60,7 @@
             this.txtigv = new System.Windows.Forms.TextBox();
             this.txttotal = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -141,6 +142,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.txtcantidad);
@@ -159,7 +161,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(320, 12);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 45);
+            this.button3.Size = new System.Drawing.Size(100, 21);
             this.button3.TabIndex = 2;
             this.button3.Text = "Agregar a Factura";
             this.button3.UseVisualStyleBackColor = true;
@@ -333,7 +335,17 @@
             this.button4.TabIndex = 8;
             this.button4.Text = "Guardar";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            //this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(320, 39);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 21);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "Eliminar Fila";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // frmDocumento
             // 
@@ -396,5 +408,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource DocumentobindingSource;
+        private System.Windows.Forms.Button button5;
     }
 }
