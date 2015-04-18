@@ -57,6 +57,15 @@ namespace NorthWind.Win
         DocumentoBL oFacturaBL = new DocumentoBL();
         private void button3_Click(object sender, EventArgs e)
         {
+            //Validar TextBox Cantidad Sea Numerico y != Nulo
+            string cantidad = txtcantidad.Text;
+            if (string.IsNullOrWhiteSpace(cantidad) || !(cantidad.Any(Char.IsDigit)))
+            {
+                MessageBox.Show("Por favor ingresar cantidad con valores numericos y diferente a Nulo");
+                txtcantidad.Focus();
+                return;
+            }
+            
             //Boton Agregar a Factura
             oFacturaBL.AgregarDetalle(new ItemBE()
             {

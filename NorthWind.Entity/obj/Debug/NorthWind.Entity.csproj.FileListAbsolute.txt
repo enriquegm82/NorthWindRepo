@@ -10,3 +10,8 @@ C:\northwind\NorthWind.Entity\obj\Debug\NorthWind.Entity.csprojResolveAssemblyRe
 >>>>>>> 78b4e75c04830708f41ffc4b2bd5af9664b7dd08
 C:\northwind\NorthWind.Entity\obj\Debug\NorthWind.Entity.dll
 C:\northwind\NorthWind.Entity\obj\Debug\NorthWind.Entity.pdb
+D:\northwindProject\northwind\NorthWind.Entity\bin\Debug\NorthWind.Entity.dll
+D:\northwindProject\northwind\NorthWind.Entity\bin\Debug\NorthWind.Entity.pdb
+D:\northwindProject\northwind\NorthWind.Entity\obj\Debug\NorthWind.Entity.csprojResolveAssemblyReference.cache
+D:\northwindProject\northwind\NorthWind.Entity\obj\Debug\NorthWind.Entity.dll
+D:\northwindProject\northwind\NorthWind.Entity\obj\Debug\NorthWind.Entity.pdb
